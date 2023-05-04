@@ -1,0 +1,32 @@
+.main-container {}
+
+
+.form-container {
+    width: 600px;
+    margin: auto;
+    margin-top: 12px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+}
+
+.input-file input[type=file] {
+    color: aqua;
+}
+
+.error-label {
+    margin-top: 2px;
+    font-size: 12px;
+    color: red;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+}

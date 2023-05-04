@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FROMS GENERATOR</title>
+    <script src="../forms_generator/js/model.js"></script>
+    <script src="../forms_generator/js/extensions.js"></script>
+    <script src="../forms_generator/js/main.js"></script>
+    <link rel="stylesheet" href="../forms_generator/css/styles.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="field">
+        <input
+          id="file-input"
+          type="file"
+          accept=".json"
+          onchange="openFormFileAndCreateForm(this)"
+        />
+        <label class="error-label" id="file-input-error" for="file-input"></label>
+      </div>
+
+      <div class="form-container"></div>
+    </div>
+  </body>
+</html>
