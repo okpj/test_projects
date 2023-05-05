@@ -6,6 +6,8 @@ const labelTagName = "label";
 const optionTagName = "option";
 const selectTagName = "select";
 const fieldsetTagName = "fieldset";
+const spanTagName = "span";
+const phoneRegex = "(7|8|9)\\d{9}";
 
 Form.prototype.toHTMLElement = function () {
   let htmlForm = document.createElement("form");
@@ -67,7 +69,7 @@ function createButtonHTMLElement(element) {
 }
 
 function createTextHTMLElement(element) {
-  let labelHTMLElement = createLabelHTMLElement(element.label);
+  let labelHTMLElement = createLabelHTMLElement(element);
 
   const elementType = element.type == ElementType.textarea ? textareaTagName : inputTagName;
   let htmlElement = document.createElement(elementType);
@@ -79,19 +81,8 @@ function createTextHTMLElement(element) {
   return labelHTMLElement;
 }
 
-function createCheckboxHTMLElement(element) {
-  let labelHTMLElement = createLabelHTMLElement(element.label);
-
-  let htmlElement = document.createElement(inputTagName);
-  htmlElement.checked = element.checked;
-
-  setBaseElementAttributes(htmlElement, element);
-  labelHTMLElement.appendChild(htmlElement);
-  return labelHTMLElement;
-}
-
 function createSelectHTMLElement(element) {
-  let labelHTMLElement = createLabelHTMLElement(element.label);
+  let labelHTMLElement = createLabelHTMLElement(element);
 
   let htmlElement = document.createElement(selectTagName);
   element.options.forEach((option) => {
@@ -104,12 +95,12 @@ function createSelectHTMLElement(element) {
 }
 
 function createRadioHTMLElement(element) {
-  let fieldSetHTMLElement = createFieldsetHTMLElement();
+  let fieldSetHTMLElement = createFieldsetHTMLElement(element.class);
 
   element.items.forEach((item) => {
-    let labelHTMLElement = createLabelHTMLElement(item.label);
+    let labelHTMLElement = createLabelHTMLElement(item);
     let htmlElement = item.toHTMLElement();
-    labelHTMLElement.appendChild(htmlElement);
+    labelHTMLElement.insertBefore(htmlElement, labelHTMLElement.firstChild);
 
     setBaseElementAttributes(htmlElement, element);
     fieldSetHTMLElement.appendChild(labelHTMLElement);
@@ -118,21 +109,46 @@ function createRadioHTMLElement(element) {
   return fieldSetHTMLElement;
 }
 
+function createCheckboxHTMLElement(element) {
+  let fieldSetHTMLElement = createFieldsetHTMLElement();
+  let labelHTMLElement = createLabelHTMLElement(element);
+
+  let htmlElement = document.createElement(inputTagName);
+  htmlElement.checked = element.checked;
+
+  setBaseElementAttributes(htmlElement, element);
+  labelHTMLElement.appendChild(htmlElement);
+  fieldSetHTMLElement.appendChild(labelHTMLElement);
+  return fieldSetHTMLElement;
+}
+
 function setBaseElementAttributes(htmlElement, element) {
   htmlElement.name = element.name;
   htmlElement.required = element.required;
   htmlElement.type = element.validationRules.type;
-  htmlElement.className = element.class;
+  if (element.validationRules.type == ValidationRuleType.tel) {
+    htmlElement.pattern = phoneRegex;
+  }
   htmlElement.disabled = element.disabled;
 }
 
-function createLabelHTMLElement(text) {
+function createLabelHTMLElement(element) {
   let labelHTMLElement = document.createElement(labelTagName);
-  labelHTMLElement.innerText = text;
+  if (element.class) {
+    labelHTMLElement.className = element.class;
+  }
+
+  let spanHTMLElement = document.createElement(spanTagName);
+  spanHTMLElement.innerText = element.label;
+
+  labelHTMLElement.appendChild(spanHTMLElement);
   return labelHTMLElement;
 }
 
-function createFieldsetHTMLElement() {
+function createFieldsetHTMLElement(className) {
   let fieldSetHTMLElement = document.createElement(fieldsetTagName);
+  if (className) {
+    fieldSetHTMLElement.className = className;
+  }
   return fieldSetHTMLElement;
 }

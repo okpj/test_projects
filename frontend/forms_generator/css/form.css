@@ -1,0 +1,30 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 540px;
+    padding: 4px;
+}
+
+.form>label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+}
+
+fieldset {
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+fieldset>label {
+    display: flex;
+    flex-direction: row;
+}
+
+fieldset>label span {}
+
+/* .test-lable span{
+    font-size: 12px;
+} */

@@ -7,20 +7,32 @@
     <script src="../forms_generator/js/extensions.js"></script>
     <script src="../forms_generator/js/main.js"></script>
     <link rel="stylesheet" href="../forms_generator/css/styles.css" />
+    <link rel="stylesheet" href="../forms_generator/css/form.css" />
   </head>
   <body>
-    <div class="main-container">
-      <div class="field">
-        <input
-          id="file-input"
-          type="file"
-          accept=".json"
-          onchange="openFormFileAndCreateForm(this)"
-        />
-        <label class="error-label" id="file-input-error" for="file-input"></label>
-      </div>
+    <header><span>Генератор форм</span></header>
+    <div class="main">
+      <div class="generator-container">
+        <div class="control-container">
+          <div class="controls">
+            <label class="label-button">
+              Открыть файл
+              <input type="file" accept=".json" onchange="openFormFile(this)" />
+            </label>
+            <label class="label-button" onclick="format()"> Форматировать </label>
+            <label class="label-button" onclick="createForm()"> Сгенерировать </label>
+          </div>
+          <label class="error-label" id="form-description-error" for="form-description"> </label>
+          <textarea id="form-description"> </textarea>
+        </div>
 
-      <div class="form-container"></div>
+        <div class="form-container">
+          <div class="form-inner-conrainer"></div>
+        </div>
+      </div>
+      <div class="result-container">
+        <textarea id="result"> </textarea>
+      </div>
     </div>
   </body>
 </html>
