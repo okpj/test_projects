@@ -57,7 +57,6 @@ RadioItem.prototype.toHTMLElement = function () {
 function createFilterHTMLElement(element) {
   let htmlElement = document.createElement(filterTagName);
   htmlElement.innerHTML = element.message;
-  htmlElement.className = ElementType.filler;
   return htmlElement;
 }
 
@@ -112,13 +111,14 @@ function createRadioHTMLElement(element) {
 function createCheckboxHTMLElement(element) {
   let fieldSetHTMLElement = createFieldsetHTMLElement();
   let labelHTMLElement = createLabelHTMLElement(element);
+  fieldSetHTMLElement.appendChild(labelHTMLElement);
 
   let htmlElement = document.createElement(inputTagName);
   htmlElement.checked = element.checked;
 
   setBaseElementAttributes(htmlElement, element);
   labelHTMLElement.appendChild(htmlElement);
-  fieldSetHTMLElement.appendChild(labelHTMLElement);
+  
   return fieldSetHTMLElement;
 }
 

@@ -1,7 +1,7 @@
 class Form {
-  name = "";
-  postmessage = "";
-  items = [new Item()];
+  name;
+  postmessag;
+  items;
 
   constructor(object) {
     Object.assign(this, object);
@@ -10,18 +10,18 @@ class Form {
 }
 
 class Item {
-  type = "";
-  name = "";
-  placeholder = "";
-  required = false;
-  label = "";
-  class = "";
-  disabled = false;
-  value = "";
-  checked = false;
-  options = [new SelectOption()];
-  items = [new RadioItem()];
-  validationRules = new ValidationRules();
+  type;
+  name;
+  placeholder;
+  required;
+  label;
+  class;
+  disabled;
+  value;
+  checked;
+  options;
+  items;
+  validationRules;
 
   constructor(object) {
     Object.assign(this, object);
@@ -35,9 +35,9 @@ class Item {
 }
 
 class SelectOption {
-  value = "";
-  text = "";
-  selected = false;
+  value;
+  text;
+  selected;
 
   constructor(object) {
     Object.assign(this, object);
@@ -45,9 +45,9 @@ class SelectOption {
 }
 
 class RadioItem {
-  value = "";
-  label = "";
-  checked = false;
+  value;
+  label;
+  checked;
 
   constructor(object) {
     Object.assign(this, object);
