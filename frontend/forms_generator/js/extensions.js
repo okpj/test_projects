@@ -1,14 +1,3 @@
-const filterTagName = "div";
-const buttonTagName = "button";
-const textareaTagName = "textarea";
-const inputTagName = "input";
-const labelTagName = "label";
-const optionTagName = "option";
-const selectTagName = "select";
-const fieldsetTagName = "fieldset";
-const spanTagName = "span";
-const phoneRegex = "(7|8|9)\\d{9}";
-
 Form.prototype.toHTMLElement = function () {
   let htmlForm = document.createElement("form");
   htmlForm.name = this.name;
@@ -118,7 +107,7 @@ function createCheckboxHTMLElement(element) {
 
   setBaseElementAttributes(htmlElement, element);
   labelHTMLElement.appendChild(htmlElement);
-  
+
   return fieldSetHTMLElement;
 }
 
