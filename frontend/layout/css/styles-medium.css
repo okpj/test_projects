@@ -49,15 +49,19 @@ li {
 .registration-section {
     flex-direction: column;
     justify-content: center;
-    gap: 15px;
+    gap: 48px;
     padding: 48px 38px;
 }
 
-.registration {
-    margin-top: 48px;
+.registration>h2 {
+    text-align: center;
 }
 
 .info span label {
     display: inline-block;
     width: 165px;
+}
+
+.price-section {
+    padding: 48px 24px;
 }

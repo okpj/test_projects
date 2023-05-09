@@ -60,10 +60,19 @@ li {
 
 .registration-section {
     padding: 24px 15px;
+    display: block;
+}
+
+.registration>h2 {
+    text-align: start;
 }
 
 .text-container {
     display: none;
+}
+
+.registration {
+    margin-top: auto;
 }
 
 .info p {
@@ -72,5 +81,9 @@ li {
 
 .info span label {
     margin-right: 15px;
-    width: 165px;
+    width: auto;
+}
+
+.price-section {
+    padding: 24px 15px;
 }

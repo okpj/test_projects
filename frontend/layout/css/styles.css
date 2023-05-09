@@ -93,7 +93,6 @@ ul {
     margin: auto;
     font-size: 32px;
     line-height: 43px;
-    text-align: center;
     font-weight: 500;
 }
 
@@ -102,4 +101,62 @@ ul {
     line-height: 21px;
     display: flex;
     flex-direction: column;
+}
+
+.price-section {
+    overflow: auto;
+}
+
+.price-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.price-section>table tbody {
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.price-table-lable {
+    margin-bottom: 32px;
+}
+
+.price-table-lable h2 {
+    display: block;
+    margin: auto;
+    font-size: 32px;
+    line-height: 43px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.price-table-lable span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+}
+
+.price-section table tbody tr:first-child {
+    border-top: 1px solid #DEE2E6;
+    border-bottom: 2px solid #DEE2E6;
+}
+
+.price-section table tbody tr {
+    border-top: 1px solid #DEE2E6;
+}
+
+.price-section table th[scope="row"] {
+    font-weight: normal;
+    text-align: start;
+}
+
+.price-section table tbody th {
+    padding: 15px;
+    text-align: start;
+}
+
+.price-section table tbody td {
+    padding: 15px;
+    text-align: start;
 }
