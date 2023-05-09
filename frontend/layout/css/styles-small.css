@@ -1,0 +1,76 @@
+.banner {
+    height: 568px;
+}
+
+nav>label {
+    display: block;
+}
+
+nav>ul {
+    display: none;
+}
+
+nav input[type="checkbox"]:checked~label+ul {
+    display: block;
+    width: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+li {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0 24px;
+}
+
+.group-logo {
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 272px;
+    height: 446px;
+    margin: auto;
+    margin-top: 48px;
+}
+
+.group-logo label:nth-of-type(1) {
+    font-size: 36px;
+    line-height: 48px;
+    margin-top: 16px;
+}
+
+.group-logo label:nth-of-type(2) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 24px;
+}
+
+.group-logo label:nth-of-type(3) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 16px;
+}
+
+.group-logo button {
+    margin-top: 32px;
+}
+
+.registration-section {
+    padding: 24px 15px;
+}
+
+.text-container {
+    display: none;
+}
+
+.info p {
+    width: 260px
+}
+
+.info span label {
+    margin-right: 15px;
+    width: 165px;
+}

@@ -1,0 +1,71 @@
+.banner {
+    height: 793px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1140px;
+    height: 50px;
+    margin: auto;
+}
+
+li {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.group-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 466px;
+    height: 462px;
+    margin: auto;
+    margin-top: 120px;
+}
+
+.group-logo label:nth-of-type(1) {
+    font-size: 36px;
+    line-height: 48px;
+    margin-top: 48px;
+}
+
+.group-logo label:nth-of-type(2) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 32px;
+}
+
+.group-logo label:nth-of-type(3) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 24px;
+}
+
+.registration-section {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    padding: 48px 0;
+}
+
+.text-container {
+    width: 540px;
+    text-align: center;
+}
+
+.registration {
+    width: 570px;
+}
+
+.info {
+    margin-left: 15px;
+}
+
+.info span label {
+    display: inline-block;
+    width: 165px;
+}

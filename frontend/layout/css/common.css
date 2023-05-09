@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    background: white;
+    font-family: "Segoe UI";
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.banner {
+    background-color: #17A2B8;
+    color: #FFFFFF;
+    margin: 0;
+    width: 100%;
+}
+
+.banner>div:first-child {
+    height: 32px;
+    background-color: #17A2B8;
+}
+
+nav {
+    position: relative;
+}
+
+nav input[type="checkbox"] {
+    display: none;
+}
+
+nav label {
+    content: "";
+    display: none;
+    cursor: pointer;
+    width: 25px;
+    height: 14px;
+    background-image: url('../static-files/menu.png');
+    margin: 16px 0 0 20px;
+
+    /* transition: 0.3s; */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.logo {
+    width: 142px;
+    height: 142px;
+}
+
+.group-logo label {
+    text-align: center;
+}
+
+.group-logo button {
+    background: #2F418A;
+    border-radius: 4px;
+    border: none;
+    width: 208px;
+    height: 56px;
+    margin-top: 48px;
+
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.registration-section {
+    background: #F8F9FA;
+    display: flex;
+}
+
+.text-container {
+    font-size: 16px;
+}
+
+.text-container>p:first-child {
+    margin: 0;
+}
+
+.text-container>p:last-child {
+    margin: 0;
+}
+
+.registration>h2 {
+    display: block;
+    margin: auto;
+    font-size: 32px;
+    line-height: 43px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.info {
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    flex-direction: column;
+}
