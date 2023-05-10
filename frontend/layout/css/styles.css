@@ -2,6 +2,11 @@ body {
     margin: 0;
     background: white;
     font-family: "Segoe UI";
+    color: #000000
+}
+
+body::-webkit-scrollbar {
+    width: 0;
 }
 
 html,
@@ -78,6 +83,7 @@ ul {
 
 .text-container {
     font-size: 16px;
+    line-height: 22px;
 }
 
 .text-container>p:first-child {

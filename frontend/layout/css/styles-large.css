@@ -47,7 +47,6 @@ li {
 
 .registration-section {
     flex-direction: row;
-    justify-content: center;
     gap: 15px;
     padding: 48px 0;
 }
@@ -59,10 +58,12 @@ li {
 .text-container {
     width: 540px;
     text-align: center;
+    margin: auto auto auto 405px;
 }
 
 .registration {
     width: 570px;
+    margin: 0 390px auto auto;
 }
 
 .info {
