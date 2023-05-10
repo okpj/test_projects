@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>LAYOUT</title>
+    <script src="./main.js"></script>
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" media="screen and (min-width: 1920px)" href="./css/styles-large.css" />
     <link
@@ -48,7 +49,7 @@
         <label class="banner-lable">НАЗВАНИЕ МЕРОПРИЯТИЯ</label>
         <label class="banner-lable">4 МАЯ 2049</label>
         <label class="banner-lable">в самом сердце страны</label>
-        <button class="banner-button">Регистрация</button>
+        <button class="banner-button" onclick="openModal()">Регистрация</button>
       </div>
     </section>
     <section class="registration-section">
@@ -146,13 +147,15 @@
       <span>© DIRECTUM, 2019</span>
     </footer>
   </body>
-  <div class="modal">
-    <span class="material-symbols-outlined modal-close"> close </span>
-    <label class="modal-label">Регистрация</label>
-    <form class="modal-form" action=".">
-      <input class="modal-form-input" type="text" placeholder="ФИО" />
-      <input class="modal-form-input" type="email" placeholder="Email" />
-      <input class="modal-form-input submit" type="submit" />
-    </form>
+  <div id="reg-modal" class="modal-container">
+    <div class="modal">
+      <span class="material-symbols-outlined modal-close" onclick="closeMoadl()"> close </span>
+      <label class="modal-label">Регистрация</label>
+      <form class="modal-form">
+        <input class="modal-form-input" type="text" placeholder="ФИО" />
+        <input class="modal-form-input" type="email" placeholder="Email" />
+        <input class="modal-form-input submit" type="submit" />
+      </form>
+    </div>
   </div>
 </html>

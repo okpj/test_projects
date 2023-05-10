@@ -241,15 +241,28 @@ footer span {
     color: #BABABA;
 }
 
+.modal-container {
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 .modal {
+    margin: auto;
+    margin-top: 35vh;
+
     background: #FFFFFF;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    width: 404px;
-    height: 252px;
+    max-width: 404px;
+    max-height: 252px;
     padding: 32px;
     box-sizing: border-box;
-
-    display: none;
 }
 
 .modal-label {
@@ -279,7 +292,7 @@ footer span {
     box-sizing: border-box;
     border: 1px solid #B5BFC3;
 
-    width: 340px;
+    width: 100%;
     height: 28px;
 
     margin-top: 16px;
@@ -311,4 +324,5 @@ footer span {
     left: 8px;
     float: right;
     color: #BEC7CB;
+    cursor: pointer;
 }
