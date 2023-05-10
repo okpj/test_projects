@@ -5,9 +5,9 @@ body {
     color: #000000
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     width: 0;
-}
+} */
 
 html,
 body {
@@ -19,11 +19,8 @@ body {
     color: #FFFFFF;
     margin: 0;
     width: 100%;
-}
-
-.banner>div:first-child {
-    height: 32px;
-    background-color: #17A2B8;
+    padding-top: 32px;
+    box-sizing: border-box;
 }
 
 nav {
@@ -34,19 +31,17 @@ nav input[type="checkbox"] {
     display: none;
 }
 
-nav label {
+.menu-icon {
     content: "";
     display: none;
     cursor: pointer;
     width: 25px;
     height: 14px;
     background-image: url('../static-files/menu.png');
-    margin: 16px 0 0 20px;
-
-    /* transition: 0.3s; */
+    margin-left: 20px;
 }
 
-ul {
+.menu {
     list-style-type: none;
     padding: 0;
 }
@@ -56,11 +51,11 @@ ul {
     height: 142px;
 }
 
-.group-logo label {
+.banner-lable {
     text-align: center;
 }
 
-.group-logo button {
+.banner-button {
     background: #2F418A;
     border-radius: 4px;
     border: none;
@@ -244,4 +239,76 @@ footer span {
     line-height: 16px;
     text-align: center;
     color: #BABABA;
+}
+
+.modal {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 404px;
+    height: 252px;
+    padding: 32px;
+    box-sizing: border-box;
+
+    display: none;
+}
+
+.modal-label {
+    font-family: 'Roboto';
+    color: #9FA3AB;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 27px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-form-input {
+    font-family: 'Roboto';
+    color: #9FA3AB;
+    font-style: normal;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    box-sizing: border-box;
+    border: 1px solid #B5BFC3;
+
+    width: 340px;
+    height: 28px;
+
+    margin-top: 16px;
+}
+
+.submit {
+    background: #2F418A;
+    color: #FFFFFF;
+    border-radius: 4px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+
+    width: 127px;
+    height: 38px;
+
+    margin-top: 24px;
+}
+
+.modal-close {
+    width: 16px;
+    height: 16px;
+    font-size: 16px !important;
+    position: relative;
+    bottom: 8px;
+    left: 8px;
+    float: right;
+    color: #BEC7CB;
 }

@@ -17,14 +17,26 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
   <body>
     <section class="banner">
-      <div></div>
       <nav>
-        <input type="checkbox" id="menu" />
-        <label class="menu-icon" for="menu"></label>
-        <ul>
+        <input type="checkbox" id="mune-switch" />
+        <label for="mune-switch" class="menu-icon"> </label>
+        <ul class="menu">
           <li><a>О мероприятии</a></li>
           <li><a>Регистрация</a></li>
           <li><a>Стоимость участия</a></li>
@@ -33,10 +45,10 @@
       </nav>
       <div class="group-logo">
         <img class="logo" src="./static-files/logo.png" />
-        <label>НАЗВАНИЕ МЕРОПРИЯТИЯ</label>
-        <label>4 МАЯ 2049</label>
-        <label>в самом сердце страны</label>
-        <button>Регистрация</button>
+        <label class="banner-lable">НАЗВАНИЕ МЕРОПРИЯТИЯ</label>
+        <label class="banner-lable">4 МАЯ 2049</label>
+        <label class="banner-lable">в самом сердце страны</label>
+        <button class="banner-button">Регистрация</button>
       </div>
     </section>
     <section class="registration-section">
@@ -134,4 +146,13 @@
       <span>© DIRECTUM, 2019</span>
     </footer>
   </body>
+  <div class="modal">
+    <span class="material-symbols-outlined modal-close"> close </span>
+    <label class="modal-label">Регистрация</label>
+    <form class="modal-form" action=".">
+      <input class="modal-form-input" type="text" placeholder="ФИО" />
+      <input class="modal-form-input" type="email" placeholder="Email" />
+      <input class="modal-form-input submit" type="submit" />
+    </form>
+  </div>
 </html>

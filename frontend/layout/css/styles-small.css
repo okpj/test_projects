@@ -1,16 +1,17 @@
 .banner {
     height: 568px;
+    padding-top: 16px;
 }
 
-nav>label {
+.menu-icon {
     display: block;
 }
 
-nav>ul {
+.menu {
     display: none;
 }
 
-nav input[type="checkbox"]:checked~label+ul {
+nav input[type="checkbox"]:checked~.menu {
     display: block;
     width: 100%;
     position: absolute;
