@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "MessengerDB": "Server=(localdb)\\mssqllocaldb;Database=MessengerDB;Trusted_Connection=True;"
+  }
+}
