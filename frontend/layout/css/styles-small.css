@@ -107,3 +107,7 @@ li {
     align-items: center;
     gap: 24px;
 }
+
+footer {
+    padding: 20px;
+}

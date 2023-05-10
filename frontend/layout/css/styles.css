@@ -218,3 +218,24 @@ ul {
     object-fit: cover;
     border: 1px solid #FFC107;
 }
+
+footer {
+    background: #F8F9FA;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+footer img {
+    width: 130px;
+    height: 28px;
+    margin: auto;
+}
+
+footer span {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #BABABA;
+}

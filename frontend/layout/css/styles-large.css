@@ -89,3 +89,7 @@ li {
 .speakers {
     gap: 32px 24px;
 }
+
+footer {
+    padding: 45px;
+}
