@@ -87,3 +87,23 @@ li {
 .price-section {
     padding: 24px 15px;
 }
+
+.speaker-section {
+    padding: 24px 15px;
+}
+
+.speaker-section>h2 {
+    text-align: start;
+}
+
+.speaker-section>h2::before {
+    content: "Готовятся к общению";
+}
+
+.speakers {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}

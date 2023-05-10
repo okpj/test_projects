@@ -77,3 +77,15 @@ li {
 .price-section {
     padding: 48px 390px;
 }
+
+.speaker-section {
+    padding: 48px 478px;
+}
+
+.speaker-section>h2::before {
+    content: "Наши спикеры";
+}
+
+.speakers {
+    gap: 32px 24px;
+}
