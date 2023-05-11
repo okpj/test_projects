@@ -1,10 +1,10 @@
 ﻿using Messenger.DataContext;
+using Messenger.Mapper;
 using Messenger.Repository;
 using Messenger.Repository.Interfaces;
 using Messenger.Service;
 using Messenger.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
 
 namespace Messenger.Extensions;
 
@@ -30,6 +30,8 @@ public static class ServiceCollectionExtensions
     public static void AddServices(this IServiceCollection services)
     {
         services.AddScoped<IUserService, UserService>();
+
+        MappingAdapter.Configure();
     }
 
 }

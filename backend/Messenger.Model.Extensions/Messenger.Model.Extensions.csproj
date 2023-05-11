@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Messenger.Model\Messenger.Model.csproj" />
+    <ProjectReference Include="..\Messenger.Util\Messenger.Util.csproj" />
+  </ItemGroup>
+
+</Project>

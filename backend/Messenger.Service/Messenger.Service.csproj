@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Messenger.Contracts\Messenger.Contracts.csproj" />
+    <ProjectReference Include="..\Messenger.Mapper\Messenger.Mapper.csproj" />
+    <ProjectReference Include="..\Messenger.Model.Extensions\Messenger.Model.Extensions.csproj" />
     <ProjectReference Include="..\Messenger.Model\Messenger.Model.csproj" />
     <ProjectReference Include="..\Messenger.Repository\Messenger.Repository.csproj" />
   </ItemGroup>

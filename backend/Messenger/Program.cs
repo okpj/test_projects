@@ -1,4 +1,5 @@
 using Messenger.Extensions;
+using Messenger.Mapper;
 
 Environment.SetEnvironmentVariable("BASEDIR", AppDomain.CurrentDomain.BaseDirectory);
 
