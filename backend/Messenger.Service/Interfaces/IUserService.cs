@@ -2,6 +2,9 @@
 
 namespace Messenger.Service.Interfaces;
 
+/// <summary>
+/// Сервис для выполнения операция над пользователем
+/// </summary>
 public interface IUserService
 {
     /// <summary>

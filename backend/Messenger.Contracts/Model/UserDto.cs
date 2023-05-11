@@ -1,5 +1,8 @@
 ﻿namespace Messenger.Contracts.Model;
 
+/// <summary>
+/// Пользователь
+/// </summary>
 public class UserDto
 {
     public int? Id { get; set; }

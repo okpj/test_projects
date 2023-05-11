@@ -1,5 +1,4 @@
 ﻿using Mapster;
-using Messenger.Model;
 
 namespace Messenger.Mapper
 {
@@ -15,7 +14,7 @@ namespace Messenger.Mapper
 
             TypeAdapterConfig<Contracts.Model.UserForSaveDto, Model.User>.NewConfig()
                .IgnoreNullValues(true)
-               .Map(dest => dest.State, src => (UserState)src.StateId);
+               .Map(dest => dest.State, src => (Model.UserState)src.StateId);
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace Messenger.Repository.Base
+﻿namespace Messenger.Repository.Base
 {
     public class GenericRepository<TEntity, TContext> : IGenericRepository<TEntity, TContext>
         where TEntity : class
@@ -69,6 +67,34 @@ namespace Messenger.Repository.Base
             try
             {
                 await UpdateAsync(obj, token);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task DeleteAsync(TEntity obj, CancellationToken token = default)
+        {
+            try
+            {
+                var _ = Context.Remove(obj);
+                var resultRows = await Context.SaveChangesAsync(token);
+
+            }
+            catch (Exception e)
+            {
+                //exception handling
+                throw;
+            }
+        }
+
+        public async Task<bool> TryDeleteAsync(TEntity obj, CancellationToken token = default)
+        {
+            try
+            {
+                await DeleteAsync(obj, token);
                 return true;
             }
             catch

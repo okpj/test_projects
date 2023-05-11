@@ -1,5 +1,8 @@
 ﻿namespace Messenger.Contracts.Model
 {
+    /// <summary>
+    /// Пользователь для запроса сохранения
+    /// </summary>
     public class UserForSaveDto
     {
         public int? Id { get; set; }

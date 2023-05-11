@@ -1,7 +1,4 @@
-﻿using Messenger.Contracts.Base;
-using Microsoft.AspNetCore.Mvc;
-
-namespace Messenger.Controllers;
+﻿namespace Messenger.Controllers;
 
 public class MessengerControllerBase : ControllerBase
 {

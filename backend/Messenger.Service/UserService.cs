@@ -3,6 +3,7 @@ using Messenger.Contracts.User;
 using Messenger.Service.Interfaces;
 using Mapster;
 using Messenger.Contracts.Model;
+using Messenger.Util;
 
 namespace Messenger.Service;
 
@@ -45,7 +46,7 @@ public class UserService : IUserService
 
     public async Task<GetUserListByNameResponse> GetUsersByName(GetUserListByNameRequest request)
     {
-        var users = await _userRepository.GetUsersByNameAsync(request.Name);
+        var users = await _userRepository.GetUsersListByNameAsync(request.Name);
         return new GetUserListByNameResponse(Contracts.Base.ResponseCode.OK)
         {
             Users = users.Adapt<List<UserDto>>()
@@ -56,6 +57,7 @@ public class UserService : IUserService
     {
         Model.User? dbUser;
         var user = request.User.Adapt<Model.User>();
+        user.Password = PasswordHasher.CreateHash(user.Password);
         if (request.User.Id is null)
         {
             dbUser = await _userRepository.TryCreateAsync(user);

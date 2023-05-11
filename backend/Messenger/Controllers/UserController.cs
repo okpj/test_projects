@@ -1,9 +1,8 @@
-﻿using Messenger.Contracts.User;
-using Messenger.Service.Interfaces;
-using Microsoft.AspNetCore.Mvc;
+﻿namespace Messenger.Controllers;
 
-namespace Messenger.Controllers;
-
+/// <summary>
+/// Операции над пользователем
+/// </summary>
 [Route("api/[controller]")]
 [ApiController]
 public class UserController : MessengerControllerBase

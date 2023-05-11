@@ -2,7 +2,7 @@
 
 public class MessengerDataContextFactory : IDesignTimeDbContextFactory<MessengerDataContext>
 {
-    public MessengerDataContext CreateDbContext(string[] args)
+    public MessengerDataContext CreateDbContext(params string[] args)
     {
         var config = new ConfigurationBuilder()
              .SetBasePath(Directory.GetCurrentDirectory())

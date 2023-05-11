@@ -1,10 +1,4 @@
-﻿using Messenger.DataContext;
-using Messenger.Model;
-using Messenger.Repository.Base;
-using Messenger.Repository.Interfaces;
-using Microsoft.EntityFrameworkCore;
-
-namespace Messenger.Repository
+﻿namespace Messenger.Repository.Repositories
 {
     public class UserRepository : GenericRepository<User, MessengerDataContext>, IUserRepository
     {
@@ -26,7 +20,7 @@ namespace Messenger.Repository
             return await Context.Users.FirstOrDefaultAsync(x => x.Name == name);
         }
 
-        public async Task<List<User>> GetUsersByNameAsync(string name)
+        public async Task<List<User>> GetUsersListByNameAsync(string name)
         {
             return await Context.Users.Where(x => x.Name.Contains(name)).ToListAsync();
         }

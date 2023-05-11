@@ -1,8 +1,4 @@
-﻿using Messenger.DataContext;
-using Messenger.Model;
-using Messenger.Repository.Base;
-
-namespace Messenger.Repository.Interfaces;
+﻿namespace Messenger.Repository.Interfaces;
 
 public interface IUserRepository : IGenericRepository<User, MessengerDataContext>
 {
@@ -32,5 +28,5 @@ public interface IUserRepository : IGenericRepository<User, MessengerDataContext
     /// </summary>
     /// <param name="name"></param>
     /// <returns></returns>
-    Task<List<User>> GetUsersByNameAsync(string name);
+    Task<List<User>> GetUsersListByNameAsync(string name);
 }

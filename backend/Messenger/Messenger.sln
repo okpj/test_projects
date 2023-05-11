@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messenger.Mapper", "..\Mess
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messenger.Contracts", "..\Messenger.Contracts\Messenger.Contracts.csproj", "{1FACBF94-2377-4C0C-B23B-380F031312D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsoleApp", "..\TestConsoleApp\TestConsoleApp.csproj", "{09AD7D1B-ED31-4422-873A-D87EECD53B36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{1FACBF94-2377-4C0C-B23B-380F031312D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FACBF94-2377-4C0C-B23B-380F031312D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FACBF94-2377-4C0C-B23B-380F031312D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09AD7D1B-ED31-4422-873A-D87EECD53B36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09AD7D1B-ED31-4422-873A-D87EECD53B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09AD7D1B-ED31-4422-873A-D87EECD53B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09AD7D1B-ED31-4422-873A-D87EECD53B36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

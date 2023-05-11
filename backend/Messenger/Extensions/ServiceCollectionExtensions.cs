@@ -1,12 +1,4 @@
-﻿using Messenger.DataContext;
-using Messenger.Mapper;
-using Messenger.Repository;
-using Messenger.Repository.Interfaces;
-using Messenger.Service;
-using Messenger.Service.Interfaces;
-using Microsoft.EntityFrameworkCore;
-
-namespace Messenger.Extensions;
+﻿namespace Messenger.Extensions;
 
 public static class ServiceCollectionExtensions
 {
